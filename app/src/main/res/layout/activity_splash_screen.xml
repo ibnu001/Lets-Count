@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vertical_polos_splash"
+    android:padding="16dp"
+    tools:context=".SplashScreenActivity">
+
+    // tulisan "Ayo belajar Berhitung"
+
+    <TextView
+        android:id="@+id/text_view_splash_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="@font/baloon_font"
+        android:gravity="center_horizontal"
+        android:text="Ayo Belajar Berhitung"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    // icon let's count untuk splash screen
+
+    <ImageView
+        android:id="@+id/icon_lets_count_splash_screen"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/icon_lets_count_hd" />
+
+    <ImageView
+        android:id="@+id/image_view_angka_1"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/image_view_angka_2"
+        android:background="@drawable/angka_1" />
+
+    <ImageView
+        android:id="@+id/image_view_angka_2"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginHorizontal="40dp"
+        android:background="@drawable/angka_2" />
+
+    <ImageView
+        android:id="@+id/image_view_angka_3"
+        android:layout_width="70dp"
+        android:layout_height="100dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/image_view_angka_2"
+        android:background="@drawable/angka_3" />
+
+    <ImageView
+        android:id="@+id/image_view_bebek"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/image_view_angka_2"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_toLeftOf="@id/image_view_kucing"
+        android:background="@drawable/bebek" />
+
+    <ImageView
+        android:id="@+id/image_view_kucing"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/image_view_angka_2"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/kucing" />
+
+    <ImageView
+        android:id="@+id/image_view_ayam"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/image_view_angka_2"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/image_view_kucing"
+        android:background="@drawable/ayam" />
+
+</RelativeLayout>

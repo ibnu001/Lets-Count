@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vertical_polos_fix"
+    android:paddingHorizontal="15dp"
+    android:paddingVertical="16dp"
+    tools:context=".BerhitungActivity">
+
+    <TextView
+        android:id="@+id/text_view_berhitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:elevation="5dp"
+        android:fontFamily="@font/baloon_font"
+        android:gravity="center_horizontal"
+        android:text="Berhitung"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="55sp" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/text_view_berhitung"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/text_view_berhitung"
+        android:background="@drawable/angka_8" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_alignBottom="@+id/text_view_berhitung"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/text_view_berhitung"
+        android:background="@drawable/angka_9" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/es_krim" />
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/semangka" />
+
+    <TextView
+        android:id="@+id/text_view_skor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_view_countdown"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/baloon_font"
+        android:freezesText="true"
+        android:text="Skor : 0"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_view_soal_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_view_countdown"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/baloon_font"
+        android:freezesText="true"
+        android:text="Soal : 1/x"
+        android:textColor="@android:color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_view_soal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/bg_cd_textview"
+        android:elevation="10dp"
+        android:fontFamily="@font/baloon_font"
+        android:freezesText="true"
+        android:gravity="center"
+        android:paddingHorizontal="65dp"
+        android:paddingVertical="3dp"
+        android:text="00:60"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/text_view_soal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="25dp"
+        android:fontFamily="@font/baloon_font"
+        android:freezesText="true"
+        android:gravity="center"
+        android:text="0 + 0 = ..."
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="65sp" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_soal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:elevation="4dp"
+            android:fontFamily="@font/baloon_font"
+            android:freezesText="true"
+            android:onClick="playRadioButton"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
+            android:text="1"
+            android:textColor="@drawable/text_color"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:elevation="4dp"
+            android:fontFamily="@font/baloon_font"
+            android:freezesText="true"
+            android:onClick="playRadioButton"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
+            android:text="2"
+            android:textColor="@drawable/text_color"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radio_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_selector"
+            android:button="@android:color/transparent"
+            android:elevation="4dp"
+            android:fontFamily="@font/baloon_font"
+            android:freezesText="true"
+            android:onClick="playRadioButton"
+            android:paddingHorizontal="30dp"
+            android:paddingVertical="15dp"
+            android:text="3"
+            android:textColor="@drawable/text_color"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_pilih_lanjut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_button_pilih_lanjut"
+        android:fontFamily="@font/baloon_font"
+        android:freezesText="true"
+        android:onClick="playPilih"
+        android:paddingVertical="10dp"
+        android:text="Pilih"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+</RelativeLayout>

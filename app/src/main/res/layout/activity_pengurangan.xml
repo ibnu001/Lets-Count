@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vertical_polos_fix"
+    android:padding="15dp"
+    tools:context=".PenguranganActivity">
+
+    <TextView
+        android:id="@+id/PenguranganDiBerhitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/baloon_font"
+        android:gravity="center"
+        android:text="PENGURANGAN"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="45sp" />
+
+    <Button
+        android:id="@+id/button_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_screen_bg"
+        android:fontFamily="@font/baloon_font"
+        android:paddingVertical="9dp"
+        android:text="◀ "
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_kembali"
+        android:layout_below="@id/PenguranganDiBerhitung"
+        android:background="@drawable/bg_tab_berhitung"
+        android:fillViewport="true"
+        android:paddingVertical="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:verticalScrollbarPosition="right">
+
+            -- pengurangan
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="25dp">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout_pengurangan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp">
+
+                    <VideoView
+                        android:id="@+id/video_view_pengurangan"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+                </FrameLayout>
+
+                // 2 - 1 = 1
+
+                <ImageView
+                    android:id="@+id/image_view_ayam_krg_1"
+                    android:layout_width="250dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/frame_layout_pengurangan"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/ayam_krg_satu" />
+
+                <Button
+                    android:id="@+id/kurang1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_ayam_krg_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="2 - 1 = 1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 3 - 1 = 2
+
+                <ImageView
+                    android:id="@+id/image_view_bebek_krg_2"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bebek_krg_dua" />
+
+                <Button
+                    android:id="@+id/kurang2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_bebek_krg_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="3 - 1 = 2"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 4 - 1 = 3
+
+                <ImageView
+                    android:id="@+id/image_view_ayam_krg_3"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/ayam_krg_tiga" />
+
+                <Button
+                    android:id="@+id/kurang3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_ayam_krg_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="4 - 1 = 3"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 5 - 1 = 4
+
+                <ImageView
+                    android:id="@+id/image_view_bebek_krg_4"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/bebek_krg_empat" />
+
+                <Button
+                    android:id="@+id/kurang4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_bebek_krg_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="5 - 1 = 4"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 6 - 1 = 5
+
+                <ImageView
+                    android:id="@+id/image_view_kucing_krg_5"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/kucing_krg_lima" />
+
+                <Button
+                    android:id="@+id/kurang5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_kucing_krg_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="6 - 1 = 5"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 7 - 1 = 6
+
+                <ImageView
+                    android:id="@+id/image_view_kelinci_krg_6"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/kelinci_krg_enam" />
+
+                <Button
+                    android:id="@+id/kurang6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_kelinci_krg_6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="7 - 1 = 6"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 8 - 1 = 7
+
+                <ImageView
+                    android:id="@+id/image_view_kucing_krg_7"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/kucing_krg_tujuh" />
+
+                <Button
+                    android:id="@+id/kurang7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_kucing_krg_7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="8 - 1 = 7"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 9 - 1 = 8
+
+                <ImageView
+                    android:id="@+id/image_view_kelinci_krg_8"
+                    android:layout_width="250dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/kurang7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/kelinci_krg_delapan" />
+
+                <Button
+                    android:id="@+id/kurang8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_kelinci_krg_8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playKurang"
+                    android:text="9 - 1 = 8"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

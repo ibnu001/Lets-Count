@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vertical_polos_fix"
+    android:padding="15dp"
+    tools:context=".PenjumlahanActivity">
+
+    <TextView
+        android:id="@+id/penjumlahanDiBerhitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/baloon_font"
+        android:gravity="center"
+        android:text="PENJUMLAHAN"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="45sp" />
+
+    <Button
+        android:id="@+id/button_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_screen_bg"
+        android:fontFamily="@font/baloon_font"
+        android:paddingVertical="9dp"
+        android:text="◀ "
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_kembali"
+        android:layout_below="@id/penjumlahanDiBerhitung"
+        android:background="@drawable/bg_tab_berhitung"
+        android:fillViewport="true"
+        android:paddingVertical="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:verticalScrollbarPosition="right">
+
+            -- penjumlahan
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="25dp">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout_penjumlahan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp">
+
+                    <VideoView
+                        android:id="@+id/video_view_penjumlahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+                </FrameLayout>
+
+                // 1 + 1 = 2
+
+                <ImageView
+                    android:id="@+id/image_view_semangka_tbh_1"
+                    android:layout_width="280dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/frame_layout_penjumlahan"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/semangka_tbh_1" />
+
+                <Button
+                    android:id="@+id/tambah2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_semangka_tbh_1"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 1 = 2"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 2 = 3
+
+                <ImageView
+                    android:id="@+id/image_view_semangka_tbh_2"
+                    android:layout_width="280dp"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/tambah2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/semangka_tbh_2" />
+
+                <Button
+                    android:id="@+id/tambah3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_semangka_tbh_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 2 = 3"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 3 = 4
+
+                <ImageView
+                    android:id="@+id/image_view_semangka_tbh_3"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/tambah3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/semangka_tbh_3" />
+
+                <Button
+                    android:id="@+id/tambah4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_semangka_tbh_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 3 = 4"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 4 = 5
+
+                <ImageView
+                    android:id="@+id/image_view_semangka_tbh_4"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/tambah4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/semangka_tbh_4" />
+
+                <Button
+                    android:id="@+id/tambah5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_semangka_tbh_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 4 = 5"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 5 = 6
+
+                <ImageView
+                    android:id="@+id/image_view_es_krim_tbh_5"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/tambah5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/es_krim_tbh_5" />
+
+                <Button
+                    android:id="@+id/tambah6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_es_krim_tbh_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 5 = 6"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 6 = 7
+
+                <ImageView
+                    android:id="@+id/image_view_es_krim_tbh_6"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/tambah6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/es_krim_tbh_6" />
+
+                <Button
+                    android:id="@+id/tambah7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_es_krim_tbh_6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 6 = 7"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 7 = 8
+
+                <ImageView
+                    android:id="@+id/image_view_es_krim_tbh_7"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/tambah7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/es_krim_tbh_7" />
+
+                <Button
+                    android:id="@+id/tambah8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_es_krim_tbh_7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 7 = 8"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // 1 + 8 = 9
+
+                <ImageView
+                    android:id="@+id/image_view_es_krim_tbh_8"
+                    android:layout_width="280dp"
+                    android:layout_height="80dp"
+                    android:layout_below="@id/tambah8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/es_krim_tbh_8" />
+
+                <Button
+                    android:id="@+id/tambah9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_es_krim_tbh_8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playJumlah"
+                    android:text="1 + 8 = 9"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

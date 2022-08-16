@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_vertical_polos_fix"
+    android:padding="15dp"
+    tools:context=".AngkaActivity">
+
+    <TextView
+        android:id="@+id/angkaDiBerhitung"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:fontFamily="@font/baloon_font"
+        android:text="ANGKA"
+        android:textColor="@color/white"
+        android:textSize="45sp" />
+
+    <Button
+        android:id="@+id/button_kembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/button_screen_bg"
+        android:fontFamily="@font/baloon_font"
+        android:paddingVertical="9dp"
+        android:text="◀ "
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_kembali"
+        android:layout_below="@id/angkaDiBerhitung"
+        android:background="@drawable/bg_tab_berhitung"
+        android:fillViewport="true"
+        android:paddingVertical="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:verticalScrollbarPosition="right">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:id="@+id/frame_layout_angka"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp">
+
+                    <VideoView
+                        android:id="@+id/video_view_angka"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+                </FrameLayout>
+
+                // angka nomor 1
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frame_layout_angka"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/gambar_1" />
+
+                <Button
+                    android:id="@+id/nomor1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 2
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_2" />
+
+                <Button
+                    android:id="@+id/nomor2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 3
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_3" />
+
+                <Button
+                    android:id="@+id/nomor3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image_view_gambar_3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="3"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 4
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_4" />
+
+                <Button
+                    android:id="@+id/nomor4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="4"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 5
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_5" />
+
+                <Button
+                    android:id="@+id/nomor5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 6
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor5"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_6" />
+
+                <Button
+                    android:id="@+id/nomor6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 7
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor6"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_7" />
+
+                <Button
+                    android:id="@+id/nomor7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="7"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 8
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_8" />
+
+                <Button
+                    android:id="@+id/nomor8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="8"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 9
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_9" />
+
+                <Button
+                    android:id="@+id/nomor9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_9"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="9"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 10
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor9"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_10" />
+
+                <Button
+                    android:id="@+id/nomor10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_10"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="10"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 11
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor10"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_11" />
+
+                <Button
+                    android:id="@+id/nomor11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_11"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="11"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 12
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor11"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_12" />
+
+                <Button
+                    android:id="@+id/nomor12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_12"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="12"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 13
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor12"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_13" />
+
+                <Button
+                    android:id="@+id/nomor13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_13"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="13"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 14
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor13"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_14" />
+
+                <Button
+                    android:id="@+id/nomor14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_14"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="14"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 15
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor14"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_15" />
+
+                <Button
+                    android:id="@+id/nomor15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_15"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="15"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 16
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor15"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_16" />
+
+                <Button
+                    android:id="@+id/nomor16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_16"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="16"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 17
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor16"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_17" />
+
+                <Button
+                    android:id="@+id/nomor17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_17"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="17"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 18
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor17"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_18" />
+
+                <Button
+                    android:id="@+id/nomor18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_18"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="18"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 19
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor18"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_19" />
+
+                <Button
+                    android:id="@+id/nomor19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_19"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="19"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+                // angka nomor 20
+
+                <ImageView
+                    android:id="@+id/image_view_gambar_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nomor19"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/gambar_20" />
+
+                <Button
+                    android:id="@+id/nomor20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_view_gambar_20"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_angka_bg"
+                    android:clickable="true"
+                    android:elevation="8dp"
+                    android:fontFamily="@font/baloon_font"
+                    android:gravity="center"
+                    android:onClick="playAngka"
+                    android:text="20"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="60sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
